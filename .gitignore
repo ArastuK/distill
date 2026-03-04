@@ -5,8 +5,12 @@ __pycache__/
 dist/
 build/
 .env
+.env.*
 .venv/
 venv/
 *.json
-!pyproject.toml
+*.log
 .DS_Store
+.idea/
+.vscode/
+.python-version

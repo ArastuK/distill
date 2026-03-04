@@ -19,6 +19,9 @@ dependencies = [
 [project.scripts]
 distill = "distill.cli.main:main"
 
+[tool.hatch.build.targets.wheel]
+packages = ["distill"]
+
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",

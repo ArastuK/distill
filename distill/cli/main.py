@@ -13,7 +13,77 @@ app = typer.Typer(
 console = Console()
 
 
-@app.command()
+@app.command("fetch")
+def fetch(
+    url: str = typer.Argument(help="YouTube URL to fetch transcript from"),
+    raw: bool = typer.Option(
+        False,
+        "--raw",
+        "-r",
+        help="Output raw transcript only (no analysis prompt)",
+    ),
+    output: str = typer.Option(
+        None,
+        "--output",
+        "-o",
+        help="Save transcript to file",
+    ),
+):
+    """Fetch a YouTube transcript with analysis instructions baked in.
+
+    By default, prepends an analysis prompt so you can pipe directly into any LLM:
+
+        distill fetch "https://youtube.com/watch?v=..." | claude
+        distill fetch "https://youtube.com/watch?v=..." | codex
+
+    Use --raw for just the transcript:
+
+        distill fetch "https://youtube.com/watch?v=..." --raw > transcript.txt
+    """
+    import sys
+
+    from distill.core.analyze import ANALYSIS_PROMPT
+    from distill.core.transcribe import (
+        format_transcript_with_timestamps,
+        get_transcript,
+        get_video_duration,
+    )
+
+    try:
+        segments, video_id = get_transcript(url)
+    except Exception as e:
+        console.print(f"[red]Error fetching transcript:[/red] {e}", stderr=True)
+        raise typer.Exit(1)
+
+    transcript_text = format_transcript_with_timestamps(segments)
+    duration = get_video_duration(segments)
+
+    h = int(duration // 3600)
+    m = int((duration % 3600) // 60)
+    duration_str = f"{h}h {m}m" if h > 0 else f"{m}m"
+
+    # Print metadata to stderr so it doesn't pollute piped output
+    console.print(
+        f"[green]✓[/green] {len(segments):,} segments, "
+        f"~{int(len(transcript_text.split()) * 1.3):,} tokens, "
+        f"{duration_str}",
+        stderr=True,
+    )
+
+    if raw:
+        content = transcript_text
+    else:
+        content = ANALYSIS_PROMPT.format(transcript=transcript_text)
+
+    if output:
+        with open(output, "w") as f:
+            f.write(content)
+        console.print(f"[green]✓[/green] Saved to {output}", stderr=True)
+    else:
+        sys.stdout.write(content + "\n")
+
+
+@app.command("process")
 def process(
     url: str = typer.Argument(help="YouTube URL to process"),
     api_key: str = typer.Option(

@@ -19,10 +19,17 @@ def get_transcript(url: str) -> tuple[list[dict], str]:
     """Fetch transcript from YouTube.
 
     Returns (transcript_segments, video_id).
+    Each segment is a dict with keys: text, start, duration.
     """
     video_id = extract_video_id(url)
-    transcript = YouTubeTranscriptApi.get_transcript(video_id)
-    return transcript, video_id
+    api = YouTubeTranscriptApi()
+    fetched = api.fetch(video_id)
+    # Convert FetchedTranscriptSnippet objects to dicts
+    segments = [
+        {"text": s.text, "start": s.start, "duration": s.duration}
+        for s in fetched
+    ]
+    return segments, video_id
 
 
 def format_transcript_with_timestamps(segments: list[dict]) -> str:
