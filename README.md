@@ -21,12 +21,6 @@ Paste a YouTube URL → get a structured breakdown:
 ## Install
 
 ```bash
-pip install distill-ai
-```
-
-Or clone and install locally:
-
-```bash
 git clone https://github.com/ArastuK/distill.git
 cd distill
 pip install -e .
