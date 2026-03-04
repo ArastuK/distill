@@ -4,9 +4,9 @@
 
 # distill
 
-Consume long-form content intelligently. YouTube videos, podcasts, books — broken down into structured, digestible sections without losing the important details.
+Consume long-form YouTube content intelligently — broken down into structured, digestible sections without losing the important details.
 
-No more choosing between watching a 3-hour podcast or reading a 5-bullet summary that misses everything. Distill gives you the full information architecture: sections, key points, verbatim quotes, concept maps, and timestamps.
+No more choosing between watching a 3-hour podcast or reading a 5-bullet summary that misses everything. Distill gives you the full information architecture: sections, key points, verbatim quotes, concept maps, and timestamps. Podcast RSS and book/PDF support coming soon.
 
 ## How It Works
 
