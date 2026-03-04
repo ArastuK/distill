@@ -73,60 +73,41 @@ distill process "https://youtube.com/watch?v=..." -m claude-opus-4-20250514
 
 ## What You Get
 
-Tested on a **2h 24m Huberman Lab podcast** with Dr. David Eagleman (neuroplasticity, time perception, dreams, polarization):
+Tested on a **2h 24m Huberman Lab podcast** with Dr. David Eagleman. Here's how distill breaks down just the first 10 minutes:
 
-```
-┌─────────────────────────────────── distill ──────────────────────────────────┐
-│ Huberman Lab: Dr. David Eagleman — Brain Plasticity, Time Perception,        │
-│ Dreams & Polarization                                                        │
-│                                                                              │
-│ Neuroscientist David Eagleman joins Andrew Huberman for a wide-ranging       │
-│ conversation on how the brain rewires itself, why time seems to speed up     │
-│ as we age, the surprising reason we dream, and what neuroscience reveals     │
-│ about political polarization.                                                │
-│                                                                              │
-│ 2h 24m • 11 sections • youtube.com/watch?v=lEULFeUVYf0                      │
-└──────────────────────────────────────────────────────────────────────────────┘
+> # Huberman Lab: Dr. David Eagleman — Brain Plasticity, Time Perception, Dreams & Polarization
+>
+> Neuroscientist David Eagleman joins Andrew Huberman for a wide-ranging conversation on how the brain rewires itself, why time seems to speed up as we age, the surprising reason we dream, how memories deceive us in courtrooms, and what neuroscience reveals about political polarization — with practical takeaways for extending plasticity and living a longer-feeling life.
+>
+> **Duration:** 2h 24m | **Sections:** 11 | **Source:** https://youtube.com/watch?v=lEULFeUVYf0
+>
+> ---
+>
+> ### 1. Introduction & Neuroplasticity Fundamentals (0:00 – 5:43)
+> Mother nature's big trick: dropping humans into the world with a half-baked brain that the environment wires up. 86 billion neurons constantly plugging and unplugging connections.
+>
+> - DNA is only half the secret of life — experience, culture, and language wire the other half
+> - If you were born 30,000 years ago with your exact DNA, you'd be a completely different person
+> - Neurons are like little creatures crawling around, searching for new places to connect
+> - Each generation absorbs prior discoveries through plasticity, then springboards forward
+>
+> *"1953, Crick and Watson burst into the Eagle and Child pub and said, 'We've discovered the secret to life.' But that was really half the secret of life because the other half is all around us."*
+>
+> ### 2. The Cortex as a One-Trick Pony (5:43 – 11:07)
+> The cortex — the outer 3mm of wrinkly brain — is the same circuitry everywhere. It gets defined by what you plug into it.
+>
+> - Humans have 4x more cortex than our nearest animal neighbors — not just prefrontal cortex
+> - Mriganka Sur's MIT experiment: plugging optic nerve into auditory cortex made it process vision
+> - Blind people's visual cortex gets taken over by hearing and touch — they discriminate finer
+> - More cortical "real estate" between input and output = more options before reacting
+> - Savantism hypothesis: devoting massive real estate to one skill creates superhuman ability at the cost of others
+>
+> *"The cortex is a one-trick pony. The reason it looks the same everywhere is because it is the same."*
+>
+> ### 3. Early Specialization vs. Diversification (13:28 – 17:49)
+> *...9 more sections, key takeaways, and concept map*
 
-Sections
-
-  1. Neuroplasticity Fundamentals  0:00 - 5:43
-     Mother nature's big trick: dropping humans into the world with a
-     half-baked brain that the environment wires up.
-     • DNA is only half the secret of life — experience wires the other half
-     • 86 billion neurons constantly plugging and unplugging connections
-     "They burst into the Eagle and Child pub and said, 'We've discovered
-      the secret to life.' But that was really half the secret of life."
-
-  2. The Cortex as a One-Trick Pony  5:43 - 11:07
-     The outer 3mm of wrinkly brain is the same circuitry everywhere —
-     defined by what you plug into it.
-     • Mriganka Sur's MIT experiment: optic nerve into auditory cortex → vision
-     • Blind people's visual cortex taken over by hearing and touch
-     "The cortex is a one-trick pony. The reason it looks the same
-      everywhere is because it is the same."
-
-  3. Extending Plasticity — Seek Novelty  17:49 - 38:06
-     ...
-
-  Key Takeaways
-
-  → Seek novelty relentlessly — once you're good at something, it stops
-    driving plasticity. The agitation of learning IS the signal.
-  → Memory density = time perception — novel experiences create more
-    memories, which your brain interprets as more time elapsed.
-  → Dreams defend visual cortex from takeover by other senses during
-    nightly darkness. Only theory with cross-species predictions.
-
-  Concept Map
-
-  Topics
-  ├── Neuroplasticity → Seeking novelty (extends plasticity in adults)
-  ├── Neuroplasticity → Dreams (REM defends visual cortex)
-  ├── Memory density → Time perception (more memories = feels longer)
-  ├── Future self → Ulysses contracts (constrain future behavior)
-  └── In-group/out-group → Polarization (empathy modulated by labels)
-```
+The full output covers all 11 sections with key points, verbatim quotes, timestamps, 6 key takeaways, and a 14-link concept map.
 
 ### How comprehensive is it?
 
